@@ -1,0 +1,150 @@
+@font-face {
+	font-family: "Inter";
+	src: url("/assets/fonts/inter.ttf");
+}
+
+@font-face {
+	font-family: "Material Icons";
+	src: url("/assets/fonts/material-icons.woff2");
+}
+
+@font-face {
+	font-family: "Impact";
+	src: url("/assets/fonts/impact.ttf");
+}
+
+@font-face {
+	font-family: "Odibee Sans";
+	src: url("/assets/fonts/odibee-sans.ttf");
+}
+
+@font-face {
+	font-family: "Papyrus";
+	src: url("/assets/fonts/papyrus.ttf");
+}
+
+:root {
+	--clr-primary: #448aff;
+	--clr-accent: #05463f;
+	--clr-bg: #fff;
+
+	--clr-accent2: #b71c1c;
+	--clr-accent3: #380e4e;
+
+	--sz-titlebar-h: 4rem;
+}
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0;
+	background-color: var(--clr-bg);
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	text-indent: 1.5rem;
+}
+
+spacer::after {
+	content: 'Please use \"dir=\" attribute with \"h\" or \"v\" to specify horizonal or vertical.'
+}
+
+spacer[dir="h"] {
+	flex: 1 0 auto;
+}
+
+spacer[dir="v"] {
+	flex: 0 1 auto;
+}
+
+spacer[dir="h"]::after,
+spacer[dir="v"]::after {
+	content: '';
+}
+
+.titlebar {
+	display: flex;
+	height: var(--sz-titlebar-h);
+	background-color: var(--clr-primary);
+}
+
+.titlebar-comment {
+	margin: auto 2.5rem 0 auto;
+	background-color: black;
+	color: white;
+	padding: 1rem 1.5rem;
+	font-size: 1.25rem;
+	font-style: italic;
+}
+
+.body {
+	display: flex;
+	height: calc(100% - var(--sz-titlebar-h));
+}
+
+.navbar {
+	padding: .5rem 2.5rem;
+}
+
+.navbar::before {
+	box-sizing: border-box;
+	content: '';
+	height: 2rem;
+	width: 100%;
+	background: var(--clr-accent2);
+	display: block;
+	margin-top: calc(-2rem - .5rem); /* decoration height minus vertical navbarHeader padding */
+	border: 1px solid black;
+}
+
+.navbarHeader {
+	display: block;
+	width: max-content;
+	font-family: "Papyrus", Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 2rem;
+	color: black;
+	padding: .5rem;
+}
+
+.navbarItem {
+	display: block;
+	font-size: 2rem;
+	text-align: center;
+	background-color: var(--clr-accent);
+	color: white;
+	font-family: "Odibee Sans", Arial, Helvetica, sans-serif;
+	padding: .5rem 0;
+	margin: 0 0 .5rem 0;
+}
+
+.navbarItem:last-child {
+	margin: 0;
+}
+
+.content-title {
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+
+.content-splash {
+	font-size: 1.5rem;
+	position: absolute;
+	right: 0;
+	top: var(--sz-titlebar-h);
+	font-family: Impact, 'Arial Narrow Bold', sans-serif;
+	color: var(--clr-accent3);
+	text-shadow: .1rem .1rem .1rem #949494;
+	transform: rotate(-4deg);
+	margin: 1rem 1rem 0 0;
+}
+
+.content-body {
+	font-size: 1rem;
+}
