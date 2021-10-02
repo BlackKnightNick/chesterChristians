@@ -122,10 +122,15 @@ spacer[dir="v"]::after {
 	font-family: "Odibee Sans", Arial, Helvetica, sans-serif;
 	padding: .5rem 0;
 	margin: 0 0 .5rem 0;
+	user-select: none;
 }
 
 .navbarItem:last-child {
 	margin: 0;
+}
+
+.content {
+	padding: 0 1rem 0 0;
 }
 
 .content-title {
@@ -147,4 +152,21 @@ spacer[dir="v"]::after {
 
 .content-body {
 	font-size: 1rem;
+}
+
+.content > h1 {
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 1rem 0;
+}
+
+.content-body > h2 {
+	font-size: 1.25rem;
+	margin: 1rem 0;
+	background-color: beige;
+	border-radius: 4px;
+	color: black;
+	box-shadow: inset 0 2px 8px hsl(0 0% 0% / 0.72);
+	padding: .75rem 1rem;
+	text-align: center;
 }
