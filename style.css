@@ -51,6 +51,10 @@ p {
 	text-indent: 1.5rem;
 }
 
+li {
+	margin: 0 0 1rem 0;
+}
+
 spacer::after {
 	content: 'Please use \"dir=\" attribute with \"h\" or \"v\" to specify horizonal or vertical.'
 }
@@ -81,6 +85,7 @@ spacer[dir="v"]::after {
 	padding: 1rem 1.5rem;
 	font-size: 1.25rem;
 	font-style: italic;
+	z-index: 1;
 }
 
 .body {
@@ -163,10 +168,21 @@ spacer[dir="v"]::after {
 .content-body > h2 {
 	font-size: 1.25rem;
 	margin: 1rem 0;
-	background-color: beige;
+	background-color: #cef6ff;
 	border-radius: 4px;
 	color: black;
 	box-shadow: inset 0 2px 8px hsl(0 0% 0% / 0.72);
 	padding: .75rem 1rem;
 	text-align: center;
+}
+
+.content-book {
+	background-color: var(--clr-primary);
+	color: white;
+	padding: .1rem .25rem;
+	border-radius: 4px;
+}
+
+.content-body {
+	font-size: 1.25rem;
 }
